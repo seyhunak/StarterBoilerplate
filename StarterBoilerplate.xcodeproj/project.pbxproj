@@ -34,6 +34,8 @@
 		7A4BF329232F10260035AD37 /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4BF328232F10260035AD37 /* UICollectionView+Extensions.swift */; };
 		7A4BF32B232F10510035AD37 /* EmbeddedNibInstantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4BF32A232F10510035AD37 /* EmbeddedNibInstantiatable.swift */; };
 		7A4BF32F232F13800035AD37 /* RepositoryDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A4BF32E232F13800035AD37 /* RepositoryDetailViewController.storyboard */; };
+		7AA14256235093A6001C7FAE /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA14255235093A6001C7FAE /* RepositoryCell.swift */; };
+		7AA14258235093AD001C7FAE /* RepositoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AA14257235093AD001C7FAE /* RepositoryCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,8 @@
 		7A4BF328232F10260035AD37 /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
 		7A4BF32A232F10510035AD37 /* EmbeddedNibInstantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbeddedNibInstantiatable.swift; sourceTree = "<group>"; };
 		7A4BF32E232F13800035AD37 /* RepositoryDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RepositoryDetailViewController.storyboard; sourceTree = "<group>"; };
+		7AA14255235093A6001C7FAE /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
+		7AA14257235093AD001C7FAE /* RepositoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +164,8 @@
 				7A4BF2F9232EF3AE0035AD37 /* RepositoriesViewModel.swift */,
 				7A4BF310232EFD840035AD37 /* RepositoriesState.swift */,
 				7A4BF31E232F0CD60035AD37 /* RepositoriesRouter.swift */,
+				7AA14255235093A6001C7FAE /* RepositoryCell.swift */,
+				7AA14257235093AD001C7FAE /* RepositoryCell.xib */,
 			);
 			path = RepositoriesList;
 			sourceTree = "<group>";
@@ -315,6 +321,7 @@
 				7A4BF2E2232EF36D0035AD37 /* LaunchScreen.storyboard in Resources */,
 				7A4BF301232EF46B0035AD37 /* RepositoryDetailViewController.xib in Resources */,
 				7A4BF2DF232EF36D0035AD37 /* Assets.xcassets in Resources */,
+				7AA14258235093AD001C7FAE /* RepositoryCell.xib in Resources */,
 				7A4BF32F232F13800035AD37 /* RepositoryDetailViewController.storyboard in Resources */,
 				7A4BF2DD232EF3690035AD37 /* Main.storyboard in Resources */,
 			);
@@ -351,6 +358,7 @@
 				7A4BF2D6232EF3690035AD37 /* AppDelegate.swift in Sources */,
 				7A4BF323232F0F3B0035AD37 /* ClassNameProtocol.swift in Sources */,
 				7A4BF30B232EFB180035AD37 /* NetworkResponse.swift in Sources */,
+				7AA14256235093A6001C7FAE /* RepositoryCell.swift in Sources */,
 				7A4BF31F232F0CD60035AD37 /* RepositoriesRouter.swift in Sources */,
 				7A4BF2FA232EF3AE0035AD37 /* RepositoriesViewModel.swift in Sources */,
 				7A4BF2D8232EF3690035AD37 /* SceneDelegate.swift in Sources */,

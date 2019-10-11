@@ -8,8 +8,6 @@
 
 import UIKit
 
-private let cellReuseIdentifier = "RepositoryCell"
-
 final class RepositoriesTableViewController: UITableViewController, StoryboardInstantiatable {
     
     // MARK: StoryboardLoadable
@@ -52,7 +50,6 @@ final class RepositoriesTableViewController: UITableViewController, StoryboardIn
 }
 
 //MARK: Setup ViewController
-
 extension RepositoriesTableViewController {
     private func setupViewModel() {
          viewModel.changeHandler = { [unowned self] change in
@@ -61,7 +58,7 @@ extension RepositoriesTableViewController {
      }
         
     private func setupTableView() {
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "RepositoryCell")
+        tableView.register(cellType: RepositoryCell.self)
         tableView.estimatedRowHeight = 50
         tableView.rowHeight = UITableView.automaticDimension
     }
@@ -107,9 +104,9 @@ extension RepositoriesTableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath)
-        let repository = viewModel.itemAtIndex(indexPath.row)
-        cell.textLabel?.text = repository?.name
+        let cell = tableView.dequeueReusableCell(with: RepositoryCell.self, for: indexPath)
+        let item = viewModel.itemAtIndex(indexPath.row)
+        cell.configure(item: item!)
         return cell
     }
 
@@ -118,5 +115,9 @@ extension RepositoriesTableViewController {
         let item = viewModel.itemAtIndex(indexPath.row)
         let viewController = RepositoriesDetailBuilder.make(with: item!)
         show(viewController, sender: nil)
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
     }
 }
